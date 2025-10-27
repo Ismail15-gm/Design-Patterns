@@ -1,10 +1,7 @@
 package Factories;
 
-import entites.Factory;
-
-import java.util.List;
+import entites.interfaces.Factory;
 
 public abstract class AbstractFactory {
-
     public abstract Factory createFactory(String... data);
 }

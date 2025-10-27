@@ -1,11 +1,11 @@
 package entites;
 
 public class WareHouse {
-    String employees_number;
+        String totalEmployees;
     String stock;
 
-    public WareHouse(String employees_number, String stock){
-        this.employees_number = employees_number;
+    public WareHouse(String totalEmployees, String stock){
+        this.totalEmployees = totalEmployees;
         this.stock = stock;
     }
 
@@ -14,6 +14,6 @@ public class WareHouse {
     }
 
     public String getEmployees() {
-        return employees_number;
+        return totalEmployees;
     }
 }

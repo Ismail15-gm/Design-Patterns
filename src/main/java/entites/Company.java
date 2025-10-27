@@ -1,6 +1,7 @@
 package entites;
 
-import Factories.ConcreteFactory;
+import Factories.ConcreteFactory1;
+import entites.interfaces.Factory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,13 +32,13 @@ public class Company {
         sb.append(CEO.replace(" ", "")).append(":|");
 
         for (int i = 0; i < factories.size(); i++) {
-            Factory factory = factories.get(i);
-            String country = factory.getCountry(); // assuming Factory has getCountry()
+            Factory1 Factory1 = (Factory1) factories.get(i);
+            String country = Factory1.getCountry();
             char prefix = Character.toUpperCase(country.charAt(0));
 
             sb.append(prefix).append(":<");
 
-            List<WareHouse> warehouses = factory.getWareHouses(); // assuming Factory has getWarehouses()
+            List<WareHouse> warehouses = Factory1.getWareHouses();
 
             for (int j = 0; j < warehouses.size(); j++) {
                 WareHouse w = warehouses.get(j);
@@ -77,10 +78,10 @@ public class Company {
 
         public CompanyBuilder addFactory(String... data) {
             
-            ConcreteFactory concreteFactory = new ConcreteFactory(); //CreateFactory
-            Factory factory = concreteFactory.createFactory(data);
+            ConcreteFactory1 concreteFactory1 = new ConcreteFactory1(); //CreateFactory
+            Factory1 Factory1 = (Factory1) concreteFactory1.createFactory(data);
 
-            this.factories.add(factory);
+            this.factories.add(Factory1);
 
             return this;
         }

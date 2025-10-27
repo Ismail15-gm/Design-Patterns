@@ -1,12 +1,14 @@
 package entites;
+import entites.interfaces.Factory;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Factory {
+public class Factory1 implements Factory {
     String country;
     List<WareHouse> weareHouses;
 
-    public Factory(){
+    public Factory1(){
         this.weareHouses = new ArrayList<>();
     }
 
