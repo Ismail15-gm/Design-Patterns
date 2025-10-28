@@ -35,4 +35,27 @@ public class Factory1 implements Factory {
             totalCapacity += Integer.parseInt(w.getStock());
         return totalCapacity;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        String country = this.getCountry();
+        char prefix = Character.toUpperCase(country.charAt(0));
+
+        res.append(prefix).append(":<");
+
+        List<WareHouse> warehouses = this.getWareHouses();
+
+        for (int j = 0; j < warehouses.size(); j++) {
+            WareHouse w = warehouses.get(j);
+            res.append(prefix)
+                    .append("e").append(j + 1)
+                    .append(w.toString());
+
+            if (j < warehouses.size() - 1) res.append(",");
+        }
+        res.append(">");
+
+        return res.toString();
+    }
 }

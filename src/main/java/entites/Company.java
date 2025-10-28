@@ -38,34 +38,13 @@ public class Company {
 
         for (int i = 0; i < factories.size(); i++) {
             Factory1 Factory1 = (Factory1) factories.get(i);
-            String country = Factory1.getCountry();
-            char prefix = Character.toUpperCase(country.charAt(0));
-
-            sb.append(prefix).append(":<");
-
-            List<WareHouse> warehouses = Factory1.getWareHouses();
-
-            for (int j = 0; j < warehouses.size(); j++) {
-                WareHouse w = warehouses.get(j);
-                sb.append(prefix)
-                        .append("e").append(j + 1)
-                        .append(":")
-                        .append(w.getStock())
-                        .append("-")
-                        .append(w.getEmployees());
-
-                if (j < warehouses.size() - 1) sb.append(",");
-            }
-
-            sb.append(">");
+            sb.append(Factory1.toString());
 
             if (i < factories.size() - 1) {
                 if(this.transitStock != null && Integer.parseInt(this.transitStock) > 0)
                     sb.append('-').append(this.transitStock);
                 sb.append(", ");
             }
-
-
         }
 
         if(this.transitStock != null && Integer.parseInt(this.transitStock) > 0)

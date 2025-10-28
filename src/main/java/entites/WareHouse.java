@@ -16,4 +16,16 @@ public class WareHouse {
     public String getEmployees() {
         return totalEmployees;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        res.append(":")
+                .append(this.getStock())
+                .append("-")
+                .append(this.getEmployees());
+
+        return res.toString();
+    }
+
 }
