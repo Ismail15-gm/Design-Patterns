@@ -62,33 +62,33 @@ public class SupplyChainManagementTest {
      * Test 3: Stock de sécurité aux frontières (pour export)
      * Chaque usine peut avoir un stock de transit aux frontières
      */
-//    @Test
-//    public void companyHasTransitStockAtBorders() {
-//        Company company1 = new CompanyBuilder()
-//                .setCEO("Karim")
-//                .addFactory("Maroc", "500", "50", "300", "40", "200", "30")
-//                .addFactory("Senegal", "400", "35", "2k50", "25")
-//                .addTransitStock("150")
-//                .build();
-//
-//        Company company2 = new CompanyBuilder()
-//                .setCEO("Sophia")
-//                .addFactory("France", "1000", "100", "800", "80", "600", "60", "400", "40")
-//                .build();
-//
-//        assertEquals(
-//                "Karim:|M:<Me1:500-50,Me2:300-40,Me3:200-30>-150, S:<Se1:400-35,Se2:250-25>-150|",
-//                company1.report()
-//        );
-//        assertEquals(
-//                "Sophia:|F:<Fe1:1000-100,Fe2:800-80,Fe3:600-60,Fe4:400-40>|",
-//                company2.report()
-//        );
-//
-//        assertEquals(1650, company1.currentProductionCapacity());
-//        assertEquals(2800, company2.currentProductionCapacity());
-//    }
-//
+    @Test
+    public void companyHasTransitStockAtBorders() {
+        Company company1 = new CompanyBuilder()
+                .setCEO("Karim")
+                .addFactory("Maroc", "500", "50", "300", "40", "200", "30")
+                .addFactory("Senegal", "400", "35", "250", "25")
+                .addTransitStock("150")
+                .build();
+
+        Company company2 = new CompanyBuilder()
+                .setCEO("Sophia")
+                .addFactory("France", "1000", "100", "800", "80", "600", "60", "400", "40")
+                .build();
+
+        assertEquals(
+                "Karim:|M:<Me1:500-50,Me2:300-40,Me3:200-30>-150, S:<Se1:400-35,Se2:250-25>-150|",
+                company1.report()
+        );
+        assertEquals(
+                "Sophia:|F:<Fe1:1000-100,Fe2:800-80,Fe3:600-60,Fe4:400-40>|",
+                company2.report()
+        );
+
+        assertEquals(1650, company1.currentProductionCapacity());
+        assertEquals(2800, company2.currentProductionCapacity());
+    }
+
 //    /**
 //     * Test 4: Préparation d'une commande importante
 //     * L'entreprise avec plus de capacité prépare une grosse commande
