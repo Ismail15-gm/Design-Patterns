@@ -8,7 +8,6 @@ public class ConcreteFactory1 extends AbstractFactory {
 
     @Override
     public Factory createFactory(String... data){
-
         Factory1 factory1 = new Factory1();
         factory1.setCountry(data[0]);
 

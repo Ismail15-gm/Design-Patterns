@@ -45,9 +45,10 @@ public class Company {
                 sb.append(prefix)
                         .append("e").append(j + 1)
                         .append(":")
-                        .append(w.getEmployees())
+                        .append(w.getStock())
                         .append("-")
-                        .append(w.getStock());
+                        .append(w.getEmployees());
+
 
                 if (j < warehouses.size() - 1) sb.append(",");
             }
@@ -61,6 +62,12 @@ public class Company {
         return sb.toString();
     }
 
+    public int currentProductionCapacity() {
+        int totalCapacity = 0;
+        for(Factory f : factories)
+            totalCapacity += f.getTotalCapacity();
+        return totalCapacity;
+    }
 
 
     static public class CompanyBuilder {

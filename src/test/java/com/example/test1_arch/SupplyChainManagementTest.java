@@ -42,6 +42,23 @@ public class SupplyChainManagementTest {
     }
 
     /**
+     * Test 2: Calcul de la capacité de production totale
+     * La capacité = somme des stocks disponibles dans tous les entrepôts
+     */
+    @Test
+    public void showCompanyProductionCapacity() {
+        Company company = new CompanyBuilder()
+                .setCEO("Ahmed")
+                .addFactory("Maroc", "500", "50", "300", "40", "200", "30")
+                .addFactory("Senegal", "400", "35", "250", "25")
+                .build();
+
+        // Total: 500 + 300 + 200 + 400 + 250 = 1650
+        assertEquals(1650, company.currentProductionCapacity());
+    }
+
+
+    /**
      * Test 3: Stock de sécurité aux frontières (pour export)
      * Chaque usine peut avoir un stock de transit aux frontières
      */

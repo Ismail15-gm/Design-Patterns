@@ -4,7 +4,7 @@ public class WareHouse {
         String totalEmployees;
     String stock;
 
-    public WareHouse(String totalEmployees, String stock){
+    public WareHouse(String stock , String totalEmployees){
         this.totalEmployees = totalEmployees;
         this.stock = stock;
     }

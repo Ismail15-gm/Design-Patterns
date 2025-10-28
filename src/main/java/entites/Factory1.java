@@ -28,4 +28,11 @@ public class Factory1 implements Factory {
     public List<WareHouse> getWareHouses() {
         return weareHouses;
     }
+
+    public int getTotalCapacity(){
+        int totalCapacity = 0;
+        for( WareHouse w : weareHouses )
+            totalCapacity += Integer.parseInt(w.getStock());
+        return totalCapacity;
+    }
 }
