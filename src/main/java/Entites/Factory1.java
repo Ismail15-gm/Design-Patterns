@@ -1,5 +1,5 @@
-package entites;
-import entites.interfaces.Factory;
+package Entites;
+import Interfaces.Factory;
 
 import java.util.ArrayList;
 import java.util.List;

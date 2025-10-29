@@ -1,7 +1,7 @@
-package entites;
+package Entites;
 
 import Factories.ConcreteFactory1;
-import entites.interfaces.Factory;
+import Interfaces.Factory;
 
 import java.util.ArrayList;
 import java.util.List;

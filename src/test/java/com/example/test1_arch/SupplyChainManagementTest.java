@@ -3,8 +3,8 @@ package com.example.test1_arch;//
 //import org.junit.Test;
 
 
-import entites.Company;
-import entites.Company.CompanyBuilder;
+import Entites.Company;
+import Entites.Company.CompanyBuilder;
 
 import org.junit.jupiter.api.Test;
 

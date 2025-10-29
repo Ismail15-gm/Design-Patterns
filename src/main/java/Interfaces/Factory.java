@@ -1,5 +1,5 @@
-package entites.interfaces;
-import entites.WareHouse;
+package Interfaces;
+import Entites.WareHouse;
 
 public interface Factory {
 

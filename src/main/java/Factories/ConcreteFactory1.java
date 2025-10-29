@@ -1,8 +1,8 @@
 package Factories;
 
-import entites.Factory1;
-import entites.WareHouse;
-import entites.interfaces.Factory;
+import Entites.Factory1;
+import Entites.WareHouse;
+import Interfaces.Factory;
 
 public class ConcreteFactory1 extends AbstractFactory {
 

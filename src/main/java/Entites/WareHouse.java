@@ -1,4 +1,4 @@
-package entites;
+package Entites;
 
 public class WareHouse {
         String totalEmployees;
