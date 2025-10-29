@@ -60,6 +60,10 @@ public class Company {
         return totalCapacity;
     }
 
+    public String getCEO() {return CEO;}
+
+    public List<Factory> getFactories() {return factories;}
+
     static public class CompanyBuilder {
         String CEO;
         List<Factory> factories;

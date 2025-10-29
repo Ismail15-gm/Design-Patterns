@@ -1,7 +1,7 @@
 package Entites;
 
 public class WareHouse {
-        String totalEmployees;
+    String totalEmployees;
     String stock;
 
     public WareHouse(String stock , String totalEmployees){
